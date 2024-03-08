@@ -651,7 +651,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-08T01:02:02.893Z",
-        "updatedAt": "2024-03-08T01:53:54.452Z",
+        "updatedAt": "2024-03-08T09:22:11.841Z",
         "deleted": false,
         "policies": [
             {
@@ -776,7 +776,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-08T01:57:25.129Z",
-        "updatedAt": "2024-03-08T02:01:05.577Z",
+        "updatedAt": "2024-03-08T09:53:08.978Z",
         "deleted": false,
         "policies": [
             {
@@ -1006,7 +1006,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-08T02:22:22.027Z",
-        "updatedAt": "2024-03-08T02:23:26.060Z",
+        "updatedAt": "2024-03-08T09:58:37.505Z",
         "deleted": false,
         "policies": [
             {
@@ -1033,7 +1033,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "Action": {
-            "name": "Api1",
+            "name": "createJob",
             "datasource": {
                 "datasourceConfiguration": {
                     "orgId": "65c5fce806602e1100000045",
@@ -1087,8 +1087,13 @@
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
                 "encodeParamsToggle": true,
-                "httpMethod": "GET",
-                "headers": [],
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
                 "queryParameters": [],
                 "bodyFormData": [],
                 "formData": {
@@ -1099,17 +1104,34 @@
                         "value": true
                     }
                 ],
-                "path": "/getJobs"
+                "path": "/createJob",
+                "body": "{\n  \"title\": {{JSON.stringify(j_title.text)}},\n  \"department\": {{JSON.stringify(j_department.selectedOptionValue)}},\n  \"jobType\": {{JSON.stringify(j_type.selectedOptionValue)}},\n  \"skills\": {{JSON.stringify(j_skills.text)}},\n  \"experience\": {{JSON.stringify(j_experience.selectedOptionValue)}},\n  \"minsalary\": {{JSON.stringify(j_minsalary.text)}},\n  \"maxsalary\": {{JSON.stringify(j_maxsalary.text)}},\n  \"company\": {{JSON.stringify(j_company.selectedOptionValue)}},\n  \"currency\": {{JSON.stringify(j_currency.selectedOptionValue)}},\n  \"description\": {{JSON.stringify(j_description.text)}}\n}\n"
             },
-            "dynamicBindingPathList": [],
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
             "isValid": true,
             "invalids": [],
-            "jsonPathKeys": [],
+            "jsonPathKeys": [
+                "JSON.stringify(j_title.text)",
+                "JSON.stringify(j_department.selectedOptionValue)",
+                "JSON.stringify(j_type.selectedOptionValue)",
+                "JSON.stringify(j_skills.text)",
+                "JSON.stringify(j_experience.selectedOptionValue)",
+                "JSON.stringify(j_minsalary.text)",
+                "JSON.stringify(j_maxsalary.text)",
+                "JSON.stringify(j_company.selectedOptionValue)",
+                "JSON.stringify(j_currency.text)",
+                "JSON.stringify(j_description.text)",
+                "JSON.stringify(j_currency.selectedOptionValue)"
+            ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-08T08:48:42.066Z",
-        "updatedAt": "2024-03-08T08:48:48.928Z",
+        "updatedAt": "2024-03-08T11:06:33.563Z",
         "deleted": false,
         "policies": [
             {
@@ -1207,7 +1229,132 @@
                         "value": true
                     }
                 ],
-                "path": "/getJobs"
+                "path": "/getJobs",
+                "body": "{\n  \"title\": {{JSON.stringify(j_title.text)}},\n  \"department\": {{JSON.stringify(j_department.selectedOptionValue)}},\n  \"jobType\": {{JSON.stringify(j_type.selectedOptionValue)}},\n  \"skills\": {{JSON.stringify(j_skills.text)}},\n  \"experience\": {{JSON.stringify(j_experience.selectedOptionValue)}},\n  \"minsalary\": {{JSON.stringify(j_minsalary.text)}},\n  \"maxsalary\": {{JSON.stringify(j_maxsalary.text)}},\n  \"company\": {{JSON.stringify(j_company.selectedOptionLabel)}},\n  \"currency\": {{JSON.stringify(j_currency.selectedOptionValue)}},\n  \"description\": {{JSON.stringify(j_description.text)}}\n}\n"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "JSON.stringify(j_title.text)",
+                "JSON.stringify(j_department.selectedOptionValue)",
+                "JSON.stringify(j_type.selectedOptionValue)",
+                "JSON.stringify(j_skills.text)",
+                "JSON.stringify(j_experience.selectedOptionValue)",
+                "JSON.stringify(j_minsalary.text)",
+                "JSON.stringify(j_maxsalary.text)",
+                "JSON.stringify(j_company.selectedOptionLabel)",
+                "JSON.stringify(j_currency.selectedOptionValue)",
+                "JSON.stringify(j_description.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-08T08:49:08.478Z",
+        "updatedAt": "2024-03-08T11:01:58.577Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65eadb4863b05fd5af34374b",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getCompanyForJob",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                },
+                "id": "65e19568cc392d1200000061",
+                "invalids": [],
+                "isValid": true,
+                "name": "hrm-nodered",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "hrm-nodered",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [
+                        {
+                            "name": "MONGO-NAME",
+                            "value": "mongo-3837"
+                        },
+                        {
+                            "name": "MONGO-HOSTNAME",
+                            "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                        }
+                    ],
+                    "status": "ready",
+                    "favicon": "",
+                    "title": ""
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "Recruit",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/getCompanyForJob",
+                "body": ""
             },
             "dynamicBindingPathList": [],
             "isValid": true,
@@ -1216,8 +1363,248 @@
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
-        "createdAt": "2024-03-08T08:49:08.478Z",
-        "updatedAt": "2024-03-08T08:49:30.448Z",
+        "createdAt": "2024-03-08T09:32:56.413Z",
+        "updatedAt": "2024-03-08T11:01:54.884Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65eadfec63b05fd5af34374c",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "updateJob",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                },
+                "id": "65e19568cc392d1200000061",
+                "invalids": [],
+                "isValid": true,
+                "name": "hrm-nodered",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "hrm-nodered",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [
+                        {
+                            "name": "MONGO-NAME",
+                            "value": "mongo-3837"
+                        },
+                        {
+                            "name": "MONGO-HOSTNAME",
+                            "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                        }
+                    ],
+                    "status": "ready",
+                    "favicon": "",
+                    "title": ""
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "Recruit",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/updateJob",
+                "body": "{\n\t\"title\": {{JSON.stringify(j_title.text)}},\n  \"department\": {{JSON.stringify(j_department.selectedOptionValue)}},\n  \"jobType\": {{JSON.stringify(j_type.selectedOptionValue)}},\n  \"skills\": {{JSON.stringify(j_skills.text)}},\n  \"experience\": {{JSON.stringify(j_experience.selectedOptionValue)}},\n  \"minsalary\": {{JSON.stringify(j_minsalary.text)}},\n  \"maxsalary\": {{JSON.stringify(j_maxsalary.text)}},\n  \"company\": {{JSON.stringify(j_company.selectedOptionValue)}},\n  \"currency\": {{JSON.stringify(j_currency.selectedOptionValue)}},\n  \"description\": {{JSON.stringify(j_description.text)}},\n\t\"_id\": {{JSON.stringify(Table2.selectedRow._id)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "JSON.stringify(j_title.text)",
+                "JSON.stringify(j_department.selectedOptionValue)",
+                "JSON.stringify(j_type.selectedOptionValue)",
+                "JSON.stringify(j_skills.text)",
+                "JSON.stringify(j_experience.selectedOptionValue)",
+                "JSON.stringify(j_minsalary.text)",
+                "JSON.stringify(j_maxsalary.text)",
+                "JSON.stringify(j_company.selectedOptionValue)",
+                "JSON.stringify(j_currency.selectedOptionValue)",
+                "JSON.stringify(j_description.text)",
+                "JSON.stringify(Table2.selectedRow._id)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-08T09:52:44.897Z",
+        "updatedAt": "2024-03-08T11:01:59.179Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65eae15b63b05fd5af34374d",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "deleteJob",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                },
+                "id": "65e19568cc392d1200000061",
+                "invalids": [],
+                "isValid": true,
+                "name": "hrm-nodered",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "hrm-nodered",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [
+                        {
+                            "name": "MONGO-NAME",
+                            "value": "mongo-3837"
+                        },
+                        {
+                            "name": "MONGO-HOSTNAME",
+                            "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                        }
+                    ],
+                    "status": "ready",
+                    "favicon": "",
+                    "title": ""
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "Recruit",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/deleteJob",
+                "body": "{\n\t\"_id\": {{JSON.stringify(Table2.selectedRow._id)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "JSON.stringify(Table2.selectedRow._id)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-08T09:58:51.794Z",
+        "updatedAt": "2024-03-08T10:27:36.545Z",
         "deleted": false,
         "policies": [
             {

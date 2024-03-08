@@ -1,0 +1,1240 @@
+[
+    {
+        "_id": "65d7baae515248acc63efd55",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "deleteProduct",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://nodered-crud-65c5fce806602e1100000045.platform.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "nodered-crud-ubos-hldmh-nodered-crud"
+                },
+                "id": "65d7a5fab8bdbd1200000012",
+                "invalids": [],
+                "isValid": true,
+                "name": "nodered-crud",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "nodered-crud",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://nodered-crud-65c5fce806602e1100000045.platform.ubos.tech",
+                    "serviceId": "nodered-crud-ubos-hldmh-nodered-crud",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [
+                        {
+                            "name": "MYAPPDB-MONGO-HOST-NAME",
+                            "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                        },
+                        {
+                            "name": "MYAPPDB-MONGO-DB-NAME",
+                            "value": "mongo-3837"
+                        },
+                        {
+                            "name": "MYAPPDB-MONGO-USER-NAME",
+                            "value": "ddmytrodubina2388"
+                        },
+                        {
+                            "name": "MYAPPDB-MONGO-PASSWORD",
+                            "value": "Ykjiggen"
+                        },
+                        {
+                            "name": "NODEREDURL",
+                            "value": "https://nodered-crud-65c5fce806602e1100000045.platform.ubos.tech"
+                        }
+                    ],
+                    "status": "ready",
+                    "favicon": "",
+                    "title": ""
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "DELETE",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"_id\":\"{{DataTable.selectedRow._id}}\"\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/delete"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "DataTable.selectedRow.text",
+                "DataTable.selectedRow._id"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-02-22T21:20:46.522Z",
+        "updatedAt": "2024-02-23T09:39:26.429Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65d7bacc515248acc63efd56",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "read",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://nodered-crud-65c5fce806602e1100000045.platform.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "nodered-crud-ubos-hldmh-nodered-crud"
+                },
+                "id": "65d7a5fab8bdbd1200000012",
+                "invalids": [],
+                "isValid": true,
+                "name": "nodered-crud",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "nodered-crud",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://nodered-crud-65c5fce806602e1100000045.platform.ubos.tech",
+                    "serviceId": "nodered-crud-ubos-hldmh-nodered-crud",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [],
+                    "status": "ready"
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/read"
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-02-22T21:21:16.345Z",
+        "updatedAt": "2024-03-08T01:08:46.549Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65d7bae8515248acc63efd57",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "update",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://nodered-crud-65c5fce806602e1100000045.platform.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "nodered-crud-ubos-hldmh-nodered-crud"
+                },
+                "id": "65d7a5fab8bdbd1200000012",
+                "invalids": [],
+                "isValid": true,
+                "name": "nodered-crud",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "nodered-crud",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://nodered-crud-65c5fce806602e1100000045.platform.ubos.tech",
+                    "serviceId": "nodered-crud-ubos-hldmh-nodered-crud",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [],
+                    "status": "ready"
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/update",
+                "body": "{\n\t\"name\":{{JSON.stringify(product_update.text)}},\n\t\"price\":{{JSON.stringify(price_update.text)}},\n\t\"rating\":{{JSON.stringify(rating_update.value)}},\n\t\"_id\":{{JSON.stringify(DataTable.selectedRow._id)}}\n}\n"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "JSON.stringify(product_update.text)",
+                "JSON.stringify(price_update.text)",
+                "JSON.stringify(rating_update.value)",
+                "JSON.stringify(DataTable.selectedRow._id)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-02-22T21:21:44.740Z",
+        "updatedAt": "2024-03-08T01:58:15.566Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65d7ed0e1f0fc1834eae30b2",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "create",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://nodered-crud-65c5fce806602e1100000045.platform.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "nodered-crud-ubos-hldmh-nodered-crud"
+                },
+                "id": "65d7a5fab8bdbd1200000012",
+                "invalids": [],
+                "isValid": true,
+                "name": "nodered-crud",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "nodered-crud",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://nodered-crud-65c5fce806602e1100000045.platform.ubos.tech",
+                    "serviceId": "nodered-crud-ubos-hldmh-nodered-crud",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [],
+                    "status": "ready"
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"name\":{{JSON.stringify(product_create.text)}},\n\t\"price\":{{JSON.stringify(price_create.text)}},\n\t\"rating\":{{JSON.stringify(rating_create.value)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/create"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "JSON.stringify(product_create.text)",
+                "JSON.stringify(price_create.text)",
+                "JSON.stringify(rating_create.value)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-02-23T00:55:42.092Z",
+        "updatedAt": "2024-03-08T01:48:25.730Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65ea619963b05fd5af343740",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getCompany",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                },
+                "id": "65e19568cc392d1200000061",
+                "invalids": [],
+                "isValid": true,
+                "name": "hrm-nodered",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "hrm-nodered",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [
+                        {
+                            "name": "MONGO-NAME",
+                            "value": "mongo-3837"
+                        },
+                        {
+                            "name": "MONGO-HOSTNAME",
+                            "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                        }
+                    ],
+                    "status": "ready",
+                    "favicon": "",
+                    "title": ""
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "Company",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/getCompany"
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-08T00:53:45.802Z",
+        "updatedAt": "2024-03-08T02:00:41.506Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65ea638a63b05fd5af343741",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "createCompany",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                },
+                "id": "65e19568cc392d1200000061",
+                "invalids": [],
+                "isValid": true,
+                "name": "hrm-nodered",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "hrm-nodered",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [
+                        {
+                            "name": "MONGO-NAME",
+                            "value": "mongo-3837"
+                        },
+                        {
+                            "name": "MONGO-HOSTNAME",
+                            "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                        }
+                    ],
+                    "status": "ready",
+                    "favicon": "",
+                    "title": ""
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "Company",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n  \"name\": {{JSON.stringify(c_name.text)}},\n  \"street\": {{JSON.stringify(c_street.text)}},\n  \"city\": {{JSON.stringify(c_city.text)}},\n  \"country\": {{JSON.stringify(c_country.text)}},\n  \"phone\": {{JSON.stringify(c_phone.text)}},\n  \"email\": {{JSON.stringify(c_email.text)}},\n  \"website\": {{JSON.stringify(c_website.text)}},\n  \"taxId\": {{JSON.stringify(c_taxId.text)}},\n  \"companyRegistry\": {{JSON.stringify(c_registry.text)}},\n  \"currency\": {{JSON.stringify(c_currency.selectedOptionValue)}}\n}\n",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/createCompany"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "JSON.stringify(c_name.text)",
+                "JSON.stringify(c_street.text)",
+                "JSON.stringify(c_city.text)",
+                "JSON.stringify(c_country.text)",
+                "JSON.stringify(c_phone.text)",
+                "JSON.stringify(c_email.text)",
+                "JSON.stringify(c_website.text)",
+                "JSON.stringify(c_taxId.text)",
+                "JSON.stringify(c_registry.text)",
+                "JSON.stringify(c_currency.selectedOptionValue)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-08T01:02:02.893Z",
+        "updatedAt": "2024-03-08T01:53:54.452Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65ea708563b05fd5af343742",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "updateCompany",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                },
+                "id": "65e19568cc392d1200000061",
+                "invalids": [],
+                "isValid": true,
+                "name": "hrm-nodered",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "hrm-nodered",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [
+                        {
+                            "name": "MONGO-NAME",
+                            "value": "mongo-3837"
+                        },
+                        {
+                            "name": "MONGO-HOSTNAME",
+                            "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                        }
+                    ],
+                    "status": "ready",
+                    "favicon": "",
+                    "title": ""
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "Company",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n  \"name\": {{JSON.stringify(c_name.text)}},\n  \"street\": {{JSON.stringify(c_street.text)}},\n  \"city\": {{JSON.stringify(c_city.text)}},\n  \"country\": {{JSON.stringify(c_country.text)}},\n  \"phone\": {{JSON.stringify(c_phone.text)}},\n  \"email\": {{JSON.stringify(c_email.text)}},\n  \"website\": {{JSON.stringify(c_website.text)}},\n  \"taxId\": {{JSON.stringify(c_taxId.text)}},\n  \"companyRegistry\": {{JSON.stringify(c_registry.text)}},\n  \"currency\": {{JSON.stringify(c_currency.selectedOptionValue)}},\n\t\"_id\": {{JSON.stringify(Table1.selectedRow._id)}}\n}\n",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/updateCompany"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "JSON.stringify(c_name.text)",
+                "JSON.stringify(c_street.text)",
+                "JSON.stringify(c_city.text)",
+                "JSON.stringify(c_country.text)",
+                "JSON.stringify(c_phone.text)",
+                "JSON.stringify(c_email.text)",
+                "JSON.stringify(c_website.text)",
+                "JSON.stringify(c_taxId.text)",
+                "JSON.stringify(c_registry.text)",
+                "JSON.stringify(c_currency.selectedOptionValue)",
+                "JSON.stringify(Table1.selectedRow._id)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-08T01:57:25.129Z",
+        "updatedAt": "2024-03-08T02:01:05.577Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65ea72a763b05fd5af343743",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "deleteCompany",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                },
+                "id": "65e19568cc392d1200000061",
+                "invalids": [],
+                "isValid": true,
+                "name": "hrm-nodered",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "hrm-nodered",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [
+                        {
+                            "name": "MONGO-NAME",
+                            "value": "mongo-3837"
+                        },
+                        {
+                            "name": "MONGO-HOSTNAME",
+                            "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                        }
+                    ],
+                    "status": "ready",
+                    "favicon": "",
+                    "title": ""
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "Company",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"_id\": {{JSON.stringify(Table1.selectedRow._id)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/deleteCompany"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "JSON.stringify(Table1.selectedRow._id)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-08T02:06:31.696Z",
+        "updatedAt": "2024-03-08T02:20:06.405Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65ea765e63b05fd5af343744",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "deleteCompany1",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                },
+                "id": "65e19568cc392d1200000061",
+                "invalids": [],
+                "isValid": true,
+                "name": "hrm-nodered",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "hrm-nodered",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [
+                        {
+                            "name": "MONGO-NAME",
+                            "value": "mongo-3837"
+                        },
+                        {
+                            "name": "MONGO-HOSTNAME",
+                            "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                        }
+                    ],
+                    "status": "ready",
+                    "favicon": "",
+                    "title": ""
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "Company",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"_id\": {{JSON.stringify(Table1.selectedRow._id)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/deleteCompany"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "JSON.stringify(Table1.selectedRow._id)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-08T02:22:22.027Z",
+        "updatedAt": "2024-03-08T02:23:26.060Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65ead0ea63b05fd5af343749",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "Api1",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                },
+                "id": "65e19568cc392d1200000061",
+                "invalids": [],
+                "isValid": true,
+                "name": "hrm-nodered",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "hrm-nodered",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [
+                        {
+                            "name": "MONGO-NAME",
+                            "value": "mongo-3837"
+                        },
+                        {
+                            "name": "MONGO-HOSTNAME",
+                            "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                        }
+                    ],
+                    "status": "ready",
+                    "favicon": "",
+                    "title": ""
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "Recruit",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/getJobs"
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-08T08:48:42.066Z",
+        "updatedAt": "2024-03-08T08:48:48.928Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65ead10463b05fd5af34374a",
+        "applicationId": "dima-crud",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getJobs",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "orgId": "65c5fce806602e1100000045",
+                    "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "product_price": null,
+                    "cpu": 250,
+                    "ram": 512,
+                    "subscription_plan": "65095119f74e030011361ae3",
+                    "plan_id": "65095119f74e030011361ae3",
+                    "subscription_id": null,
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                },
+                "id": "65e19568cc392d1200000061",
+                "invalids": [],
+                "isValid": true,
+                "name": "hrm-nodered",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "read:service",
+                    "manage:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "hrm-nodered",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                    "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                    "applicationId": "65c5fce806602e1100000047",
+                    "env": [
+                        {
+                            "name": "MONGO-NAME",
+                            "value": "mongo-3837"
+                        },
+                        {
+                            "name": "MONGO-HOSTNAME",
+                            "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                        }
+                    ],
+                    "status": "ready",
+                    "favicon": "",
+                    "title": ""
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "Recruit",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/getJobs"
+            },
+            "dynamicBindingPathList": [],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-03-08T08:49:08.478Z",
+        "updatedAt": "2024-03-08T08:49:30.448Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    }
+]

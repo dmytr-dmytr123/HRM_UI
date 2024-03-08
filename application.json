@@ -1,0 +1,397 @@
+{
+    "_id": "65d7a655515248acc63efd4e",
+    "name": "dima-crud",
+    "slug": "dima-crud",
+    "organizationId": "Org",
+    "isPublic": false,
+    "isMenu": false,
+    "isShowPlatformTag": true,
+    "createdAt": "2024-02-22T19:53:57.786Z",
+    "updatedAt": "2024-03-08T11:49:14.187Z",
+    "deleted": false,
+    "pages": [
+        {
+            "_id": "home",
+            "isDefault": true
+        },
+        {
+            "_id": "Company",
+            "isDefault": false
+        },
+        {
+            "_id": "Recruit",
+            "isDefault": false
+        },
+        {
+            "_id": "CompanyJobs",
+            "isDefault": false
+        }
+    ],
+    "policies": [
+        {
+            "permission": "makePublic:applications",
+            "groups": [],
+            "users": []
+        },
+        {
+            "permission": "read:applications",
+            "groups": [],
+            "users": []
+        },
+        {
+            "permission": "publish:applications",
+            "groups": [],
+            "users": []
+        },
+        {
+            "permission": "manage:applications",
+            "groups": [],
+            "users": []
+        }
+    ],
+    "appLayout": {
+        "type": "DESKTOP"
+    },
+    "settings_data": {
+        "httpIns": [
+            {
+                "label": "POST |  | /createCompany",
+                "value": {
+                    "url": "/createCompany",
+                    "method": "post",
+                    "datasource": {
+                        "datasourceConfiguration": {
+                            "orgId": "65c5fce806602e1100000045",
+                            "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                            "product_price": null,
+                            "cpu": 250,
+                            "ram": 512,
+                            "subscription_plan": "65095119f74e030011361ae3",
+                            "plan_id": "65095119f74e030011361ae3",
+                            "subscription_id": null,
+                            "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                        },
+                        "id": "65e19568cc392d1200000061",
+                        "invalids": [],
+                        "isValid": true,
+                        "name": "hrm-nodered",
+                        "new": false,
+                        "type": "api",
+                        "organizationId": "Org",
+                        "pluginId": "API",
+                        "userPermissions": [
+                            "read:service",
+                            "manage:service"
+                        ],
+                        "settings_data": {
+                            "gitName": "",
+                            "projectName": "hrm-nodered",
+                            "systemType": "latest",
+                            "gitUrl": "",
+                            "gitPassword": "",
+                            "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                            "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                            "applicationId": "65c5fce806602e1100000047",
+                            "env": [
+                                {
+                                    "name": "MONGO-NAME",
+                                    "value": "mongo-3837"
+                                },
+                                {
+                                    "name": "MONGO-HOSTNAME",
+                                    "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                                }
+                            ],
+                            "status": "ready",
+                            "favicon": "",
+                            "title": ""
+                        }
+                    }
+                }
+            },
+            {
+                "label": "GET |  | /getCompany",
+                "value": {
+                    "url": "/getCompany",
+                    "method": "get",
+                    "datasource": {
+                        "datasourceConfiguration": {
+                            "orgId": "65c5fce806602e1100000045",
+                            "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                            "product_price": null,
+                            "cpu": 250,
+                            "ram": 512,
+                            "subscription_plan": "65095119f74e030011361ae3",
+                            "plan_id": "65095119f74e030011361ae3",
+                            "subscription_id": null,
+                            "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                        },
+                        "id": "65e19568cc392d1200000061",
+                        "invalids": [],
+                        "isValid": true,
+                        "name": "hrm-nodered",
+                        "new": false,
+                        "type": "api",
+                        "organizationId": "Org",
+                        "pluginId": "API",
+                        "userPermissions": [
+                            "read:service",
+                            "manage:service"
+                        ],
+                        "settings_data": {
+                            "gitName": "",
+                            "projectName": "hrm-nodered",
+                            "systemType": "latest",
+                            "gitUrl": "",
+                            "gitPassword": "",
+                            "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                            "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                            "applicationId": "65c5fce806602e1100000047",
+                            "env": [
+                                {
+                                    "name": "MONGO-NAME",
+                                    "value": "mongo-3837"
+                                },
+                                {
+                                    "name": "MONGO-HOSTNAME",
+                                    "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                                }
+                            ],
+                            "status": "ready",
+                            "favicon": "",
+                            "title": ""
+                        }
+                    }
+                }
+            },
+            {
+                "label": "PUT |  | /updateCompany",
+                "value": {
+                    "url": "/updateCompany",
+                    "method": "put",
+                    "datasource": {
+                        "datasourceConfiguration": {
+                            "orgId": "65c5fce806602e1100000045",
+                            "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                            "product_price": null,
+                            "cpu": 250,
+                            "ram": 512,
+                            "subscription_plan": "65095119f74e030011361ae3",
+                            "plan_id": "65095119f74e030011361ae3",
+                            "subscription_id": null,
+                            "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                        },
+                        "id": "65e19568cc392d1200000061",
+                        "invalids": [],
+                        "isValid": true,
+                        "name": "hrm-nodered",
+                        "new": false,
+                        "type": "api",
+                        "organizationId": "Org",
+                        "pluginId": "API",
+                        "userPermissions": [
+                            "read:service",
+                            "manage:service"
+                        ],
+                        "settings_data": {
+                            "gitName": "",
+                            "projectName": "hrm-nodered",
+                            "systemType": "latest",
+                            "gitUrl": "",
+                            "gitPassword": "",
+                            "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                            "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                            "applicationId": "65c5fce806602e1100000047",
+                            "env": [
+                                {
+                                    "name": "MONGO-NAME",
+                                    "value": "mongo-3837"
+                                },
+                                {
+                                    "name": "MONGO-HOSTNAME",
+                                    "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                                }
+                            ],
+                            "status": "ready",
+                            "favicon": "",
+                            "title": ""
+                        }
+                    }
+                }
+            },
+            {
+                "label": "PUT |  | /deleteCompany",
+                "value": {
+                    "url": "/deleteCompany",
+                    "method": "put",
+                    "datasource": {
+                        "datasourceConfiguration": {
+                            "orgId": "65c5fce806602e1100000045",
+                            "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                            "product_price": null,
+                            "cpu": 250,
+                            "ram": 512,
+                            "subscription_plan": "65095119f74e030011361ae3",
+                            "plan_id": "65095119f74e030011361ae3",
+                            "subscription_id": null,
+                            "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                        },
+                        "id": "65e19568cc392d1200000061",
+                        "invalids": [],
+                        "isValid": true,
+                        "name": "hrm-nodered",
+                        "new": false,
+                        "type": "api",
+                        "organizationId": "Org",
+                        "pluginId": "API",
+                        "userPermissions": [
+                            "read:service",
+                            "manage:service"
+                        ],
+                        "settings_data": {
+                            "gitName": "",
+                            "projectName": "hrm-nodered",
+                            "systemType": "latest",
+                            "gitUrl": "",
+                            "gitPassword": "",
+                            "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                            "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                            "applicationId": "65c5fce806602e1100000047",
+                            "env": [
+                                {
+                                    "name": "MONGO-NAME",
+                                    "value": "mongo-3837"
+                                },
+                                {
+                                    "name": "MONGO-HOSTNAME",
+                                    "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                                }
+                            ],
+                            "status": "ready",
+                            "favicon": "",
+                            "title": ""
+                        }
+                    }
+                }
+            },
+            {
+                "label": "POST |  | /createJob",
+                "value": {
+                    "url": "/createJob",
+                    "method": "post",
+                    "datasource": {
+                        "datasourceConfiguration": {
+                            "orgId": "65c5fce806602e1100000045",
+                            "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                            "product_price": null,
+                            "cpu": 250,
+                            "ram": 512,
+                            "subscription_plan": "65095119f74e030011361ae3",
+                            "plan_id": "65095119f74e030011361ae3",
+                            "subscription_id": null,
+                            "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                        },
+                        "id": "65e19568cc392d1200000061",
+                        "invalids": [],
+                        "isValid": true,
+                        "name": "hrm-nodered",
+                        "new": false,
+                        "type": "api",
+                        "organizationId": "Org",
+                        "pluginId": "API",
+                        "userPermissions": [
+                            "read:service",
+                            "manage:service"
+                        ],
+                        "settings_data": {
+                            "gitName": "",
+                            "projectName": "hrm-nodered",
+                            "systemType": "latest",
+                            "gitUrl": "",
+                            "gitPassword": "",
+                            "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                            "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                            "applicationId": "65c5fce806602e1100000047",
+                            "env": [
+                                {
+                                    "name": "MONGO-NAME",
+                                    "value": "mongo-3837"
+                                },
+                                {
+                                    "name": "MONGO-HOSTNAME",
+                                    "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                                }
+                            ],
+                            "status": "ready",
+                            "favicon": "",
+                            "title": ""
+                        }
+                    }
+                }
+            },
+            {
+                "label": "GET |  | /getJobs",
+                "value": {
+                    "url": "/getJobs",
+                    "method": "get",
+                    "datasource": {
+                        "datasourceConfiguration": {
+                            "orgId": "65c5fce806602e1100000045",
+                            "url": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                            "product_price": null,
+                            "cpu": 250,
+                            "ram": 512,
+                            "subscription_plan": "65095119f74e030011361ae3",
+                            "plan_id": "65095119f74e030011361ae3",
+                            "subscription_id": null,
+                            "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered"
+                        },
+                        "id": "65e19568cc392d1200000061",
+                        "invalids": [],
+                        "isValid": true,
+                        "name": "hrm-nodered",
+                        "new": false,
+                        "type": "api",
+                        "organizationId": "Org",
+                        "pluginId": "API",
+                        "userPermissions": [
+                            "read:service",
+                            "manage:service"
+                        ],
+                        "settings_data": {
+                            "gitName": "",
+                            "projectName": "hrm-nodered",
+                            "systemType": "latest",
+                            "gitUrl": "",
+                            "gitPassword": "",
+                            "urlNodeRed": "https://hrm-nodered-65c5fce806602e1100000045.ubos.tech",
+                            "serviceId": "hrm-nodered-ubos-hldmh-hrm-nodered",
+                            "applicationId": "65c5fce806602e1100000047",
+                            "env": [
+                                {
+                                    "name": "MONGO-NAME",
+                                    "value": "mongo-3837"
+                                },
+                                {
+                                    "name": "MONGO-HOSTNAME",
+                                    "value": "mongo-3837-ubos-hldmh-mongo-3837.ubos-hldmh"
+                                }
+                            ],
+                            "status": "ready",
+                            "favicon": "",
+                            "title": ""
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "gitApplicationMetadata": {
+        "browserSupportedRemoteUrl": "https://github.com/dmytr-dmytr123/HRM_UI",
+        "defaultApplicationId": "dima-crud",
+        "defaultBranchName": "main",
+        "isRepoPrivate": true,
+        "remoteUrl": "git@github.com:dmytr-dmytr123/HRM_UI.git",
+        "repoName": "HRM_UI"
+    }
+}
